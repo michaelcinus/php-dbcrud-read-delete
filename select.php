@@ -25,14 +25,15 @@
 
     if ($result && $result->num_rows > 0) {
 
-        echo '<ul>';
+         echo '<ol>';
        
         while($row = $result->fetch_assoc()) {
 
-            echo $row['id'] ." - " .$row['status'] ." - " .$row['price'] . '<br>';
-            echo '</li>';
+            echo '<li>' . $row['id'] ." - " .$row['status'] ." - " .$row['price'] . '</li>' ;
 
         }
+
+        echo '</ol>';
 
     } elseif ($result) {
 
@@ -60,10 +61,11 @@
        
         while($row = $result->fetch_assoc()) {
 
-            echo $row['id'] ." - " .$row['status'] ." - " .$row['price'] . '<br>';
-            echo '</li>';
+            echo '<li>' . $row['id'] ." - " .$row['status'] ." - " .$row['price'] . '</li>' ;
 
         }
+
+        echo '</ul>';
 
     } elseif ($result) {
 
